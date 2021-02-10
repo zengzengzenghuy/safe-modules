@@ -110,21 +110,19 @@ module.exports = {
 
   // Configure your compilers
   compilers: {
-    compilers: {
-      solc: {
-        version: '0.7.6',
-        settings: {
-          optimizer: {
-            enabled: true
-          },
-        }
+    solc: {
+      version: '0.7.6',
+      settings: {
+        optimizer: {
+          enabled: true
+        },
       }
     },
-    plugins: [
-      'truffle-plugin-verify'
-    ],
-    api_keys: {
-      etherscan: `${process.env.BINANCE_API_KEY}`
-    },
-    }
+  },
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    etherscan: `${process.env.BINANCE_API_KEY}`
+  },
 }
