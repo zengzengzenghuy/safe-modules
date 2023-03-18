@@ -38,9 +38,35 @@ await socialRecoveryModule.confirmTransaction(dataHash, {from: friend[N-2]})
 await socialRecoveryModule.recoverAccess(prevOwner, oldOwner, newOwner, {from: friend[N-1]})
 ```
 
-## TODO
+### Contract
 
-More testing.
+import [https://github.com/gnosis/zodiac/blob/master/contracts/core/Module.sol](https://github.com/gnosis/zodiac/blob/master/contracts/core/Module.sol)
+
+import [https://github.com/safe-global/safe-contracts/blob/main/contracts/base/ModuleManager.sol](https://github.dev/safe-global/safe-contracts/blob/main/contracts/base/ModuleManager.sol)
+
+import [https://github.com/safe-global/safe-contracts/blob/main/contracts/base/ModuleManager.sol](https://github.dev/safe-global/safe-contracts/blob/main/contracts/base/ModuleManager.sol)
+
+In [Zodiac](https://github.com/gnosis/zodiac), [IAvatar.sol](https://github.com/gnosis/zodiac/blob/master/contracts/interfaces/IAvatar.sol) is the same as [ModuleManager.sol](https://github.com/safe-global/safe-contracts/blob/main/contracts/base/ModuleManager.sol).
+
+### How to use create module?
+
+https://www.youtube.com/watch?v=QdOfuxxXVBA  
+**Key component**  
+![Module Manager](./static/image/ModuleManager.png)
+![Module](./static/image/Module.png)
+
+## Install
+
+```bash
+yarn add
+```
+
+## Compiling contracts
+
+```bash
+yarn
+yarn compile
+```
 
 ## Running tests
 
@@ -51,8 +77,12 @@ yarn
 yarn test
 ```
 
-## Compiling contracts
-```bash
-yarn
-yarn compile
-```
+## Architecture
+
+### The original architecture
+
+![original architecture](./static/image/Social-recovery-module-social_recovery_original.drawio.png)
+
+### Simplified architecture
+
+![simplified architecture](./static/image/Social-recovery-module-social_recovery_simplified.drawio.png)
